@@ -10,45 +10,45 @@ import java.util.Properties;
 
 public class J202203150619_4 extends JFrame {
     //****************************************************************************************************************//
-    //³ÉÔ±±äÁ¿
+    //æˆå‘˜å˜é‡
     //****************************************************************************************************************//
-    private static String title = "202203150619£­Íõ³¿Ñô£­Java ³ÌĞòÉè¼Æ×ÛºÏÊµÑé";
-    //      ²Ëµ¥À¸Ïà¹Ø
+    private static String title = "studentNumberï¼studentNameï¼Java ç¨‹åºè®¾è®¡ç»¼åˆå®éªŒ";
+    //      èœå•æ ç›¸å…³
     private static JMenuBar mb = new JMenuBar();
-    private static JMenu mFile = new MyMenu("ÎÄ¼ş(F)", KeyEvent.VK_F),
-            mHomeWork = new MyMenu("JavaÉÏ»úÌâÄ¿"),
-            mPhone = new MyMenu("Í¨Ñ¶Â¼(C)", KeyEvent.VK_C);
-    private static JMenuItem miFileNew = new JMenuItem("ĞÂ½¨(N)", KeyEvent.VK_N),
-            miFileOpen = new JMenuItem("´ò¿ª(O)...", KeyEvent.VK_O),
-            miFileSave = new JMenuItem("±£´æ(S)", KeyEvent.VK_S),
-            miFileFont = new JMenuItem("×ÖÌåÓëÑÕÉ«(F)...", KeyEvent.VK_F),
-            miFileBG = new JMenuItem("±³¾°ÑÕÉ«(B)...", KeyEvent.VK_B),
-            miFileQuit = new JMenuItem("ÍË³ö(X)", KeyEvent.VK_X),
-            miHWHuiwen = new JMenuItem("»ØÎÄÊı"),
-            miHWTrans = new JMenuItem("Êı×ÖÓëÓ¢ÎÄ»¥Òë"),
-            miHWCompute = new JMenuItem("Í³¼ÆÓ¢ÎÄÊı¾İ"),
-            miHWPhoneCheck = new JMenuItem("ÊÖ»úºÅºÏ·¨ĞÔÅĞ¶Ï"),
-            miHWSum = new JMenuItem("ÎÄ±¾ÎÄ¼şÇóºÍ"),
-            miPhoneDisplay = new JMenuItem("Í¨Ñ¶Â¼Î¬»¤"),
-            miPhoneSave = new JMenuItem(" Í¨Ñ¶Â¼´¢´æÎÄ¼şÉèÖÃ");
+    private static JMenu mFile = new MyMenu("æ–‡ä»¶(F)", KeyEvent.VK_F),
+            mHomeWork = new MyMenu("Javaä¸Šæœºé¢˜ç›®"),
+            mPhone = new MyMenu("é€šè®¯å½•(C)", KeyEvent.VK_C);
+    private static JMenuItem miFileNew = new JMenuItem("æ–°å»º(N)", KeyEvent.VK_N),
+            miFileOpen = new JMenuItem("æ‰“å¼€(O)...", KeyEvent.VK_O),
+            miFileSave = new JMenuItem("ä¿å­˜(S)", KeyEvent.VK_S),
+            miFileFont = new JMenuItem("å­—ä½“ä¸é¢œè‰²(F)...", KeyEvent.VK_F),
+            miFileBG = new JMenuItem("èƒŒæ™¯é¢œè‰²(B)...", KeyEvent.VK_B),
+            miFileQuit = new JMenuItem("é€€å‡º(X)", KeyEvent.VK_X),
+            miHWHuiwen = new JMenuItem("å›æ–‡æ•°"),
+            miHWTrans = new JMenuItem("æ•°å­—ä¸è‹±æ–‡äº’è¯‘"),
+            miHWCompute = new JMenuItem("ç»Ÿè®¡è‹±æ–‡æ•°æ®"),
+            miHWPhoneCheck = new JMenuItem("æ‰‹æœºå·åˆæ³•æ€§åˆ¤æ–­"),
+            miHWSum = new JMenuItem("æ–‡æœ¬æ–‡ä»¶æ±‚å’Œ"),
+            miPhoneDisplay = new JMenuItem("é€šè®¯å½•ç»´æŠ¤"),
+            miPhoneSave = new JMenuItem(" é€šè®¯å½•å‚¨å­˜æ–‡ä»¶è®¾ç½®");
 
-    //      ÎÄ±¾ÇøÏà¹Ø
+    //      æ–‡æœ¬åŒºç›¸å…³
     private static JTextArea ta = new JTextArea();
-    //×ÖÌåÓë×ÖÌå´óĞ¡
-    private static String font = "¿¬Ìå";
+    //å­—ä½“ä¸å­—ä½“å¤§å°
+    private static String font = "æ¥·ä½“";
     private static int fontSize = 15;
     private static String fontColor = "black";
     private static String bgColor = "#ffffff";
-    //³õÊ¼»¯Îªµ±Ç°ÎÄ¼ş¼Ğ
+    //åˆå§‹åŒ–ä¸ºå½“å‰æ–‡ä»¶å¤¹
     private static String filePath = System.getProperty("user.dir").replace("\\", "\\\\") + "\\\\",
             fileName = null;
     private static String textContent = "";
-    //×ÖÌåÑ¡Ôñ´°¿Ú
+    //å­—ä½“é€‰æ‹©çª—å£
     private static MyFontDly myFontDly;
 
     {
         InitTextArea();
-        myFontDly = new MyFontDly("×ÖÌå");
+        myFontDly = new MyFontDly("å­—ä½“");
         myFontDly.hideFontDly();
         myFontDly.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         myFontDly.addWindowListener(new WindowAdapter() {
@@ -59,34 +59,34 @@ public class J202203150619_4 extends JFrame {
         });
     }
 
-    //      Í¨Ñ¶Â¼Ïà¹Ø
-    //Êı¾İÎÄ¼ş
+    //      é€šè®¯å½•ç›¸å…³
+    //æ•°æ®æ–‡ä»¶
     private static String dataFilePath = System.getProperty("user.dir").replace("\\", "\\\\") + "\\\\",
             dataFileName = "data.dat";
 
     private static ContactManager mana;
 
     //****************************************************************************************************************//
-    //³õÊ¼»¯
+    //åˆå§‹åŒ–
     //****************************************************************************************************************//
     private J202203150619_4(String title) {
         super(title);
 
-        //Ìí¼Ó²Ëµ¥Ìõ ²¢ ¼¤»îÆäÊ¹ÓÃ
+        //æ·»åŠ èœå•æ¡ å¹¶ æ¿€æ´»å…¶ä½¿ç”¨
         addMenus();
         activeMenus();
 
-        //¶ÁÈ¡Í¨Ñ¶Â¼Êı¾İ´¢´æÎ»ÖÃ
+        //è¯»å–é€šè®¯å½•æ•°æ®å‚¨å­˜ä½ç½®
         readinDataPath();
 
-        //ÖØĞ´setSize·½·¨À´×Ô¶¯ÊÊÓ¦²»Í¬·Ö±æÂÊ
+        //é‡å†™setSizeæ–¹æ³•æ¥è‡ªåŠ¨é€‚åº”ä¸åŒåˆ†è¾¨ç‡
         setSize();
     }
 
     private void addMenus() {
         setJMenuBar(mb);
 
-        //ÎÄ¼ş°´Å¥Ìí¼ÓÑ¡Ïî
+        //æ–‡ä»¶æŒ‰é’®æ·»åŠ é€‰é¡¹
         mFile.add(miFileNew);
         mFile.add(miFileOpen);
         mFile.add(miFileSave);
@@ -105,30 +105,30 @@ public class J202203150619_4 extends JFrame {
         mPhone.add(miPhoneDisplay);
         mPhone.add(miPhoneSave);
 
-        //°Ñ°´Å¥Ìí¼Ó½ø²Ëµ¥Ìõ
+        //æŠŠæŒ‰é’®æ·»åŠ è¿›èœå•æ¡
         mb.add(mFile);
         mb.add(mHomeWork);
         mb.add(mPhone);
     }
 
     private void activeMenus() {
-        //¼¤»îÎÄ¼ş°´Å¥
+        //æ¿€æ´»æ–‡ä»¶æŒ‰é’®
 
-        //ĞÂ½¨°´Å¥
+        //æ–°å»ºæŒ‰é’®
         miFileNew.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 newFile();
             }
         });
-        //´ò¿ª°´Å¥
+        //æ‰“å¼€æŒ‰é’®
         miFileOpen.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openFile();
             }
         });
-        //±£´æ°´Å¥
+        //ä¿å­˜æŒ‰é’®
         miFileSave.setAccelerator(KeyStroke.getKeyStroke(
                 KeyEvent.VK_S, InputEvent.CTRL_DOWN_MASK
         ));
@@ -138,21 +138,21 @@ public class J202203150619_4 extends JFrame {
                 saveFile();
             }
         });
-        //×ÖÌåÓëÑÕÉ«°´Å¥
+        //å­—ä½“ä¸é¢œè‰²æŒ‰é’®
         miFileFont.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setFont();
             }
         });
-        //±³¾°ÑÕÉ«°´Å¥
+        //èƒŒæ™¯é¢œè‰²æŒ‰é’®
         miFileBG.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setBGColor();
             }
         });
-        //ÍË³ö°´Å¥
+        //é€€å‡ºæŒ‰é’®
         miFileQuit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -161,36 +161,36 @@ public class J202203150619_4 extends JFrame {
         });
 
 
-        //¼¤»îjavaÉÏ»úÌâÄ¿°´Å¥
-        //»ØÎÄÊı
+        //æ¿€æ´»javaä¸Šæœºé¢˜ç›®æŒ‰é’®
+        //å›æ–‡æ•°
         miHWHuiwen.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 checkHuiWen();
             }
         });
-        //Êı×ÖÓëÓ¢ÎÄ»¥Òë
+        //æ•°å­—ä¸è‹±æ–‡äº’è¯‘
         miHWTrans.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 transNumToEng();
             }
         });
-        //Í³¼ÆÓ¢ÎÄÊı¾İ
+        //ç»Ÿè®¡è‹±æ–‡æ•°æ®
         miHWCompute.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 computeWords();
             }
         });
-        //ÊÖ»úºÅÂëºÏ·¨ĞÔÅĞ¶Ï
+        //æ‰‹æœºå·ç åˆæ³•æ€§åˆ¤æ–­
         miHWPhoneCheck.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 phoneCheck();
             }
         });
-        //ÎÄ±¾ÎÄ¼şÇóºÍ
+        //æ–‡æœ¬æ–‡ä»¶æ±‚å’Œ
         miHWSum.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -198,8 +198,8 @@ public class J202203150619_4 extends JFrame {
             }
         });
 
-        //Í¨Ñ¶Â¼°´Å¥
-        //Í¨Ñ¶Â¼Î¬»¤
+        //é€šè®¯å½•æŒ‰é’®
+        //é€šè®¯å½•ç»´æŠ¤
         miPhoneDisplay.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -211,7 +211,7 @@ public class J202203150619_4 extends JFrame {
                 }
             }
         });
-        //Í¨Ñ¶Â¼´¢´æÎÄ¼şÉèÖÃ
+        //é€šè®¯å½•å‚¨å­˜æ–‡ä»¶è®¾ç½®
         miPhoneSave.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -221,23 +221,23 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void setSize() {
-        //»ñµÃ×ÀÃæ´óĞ¡
+        //è·å¾—æ¡Œé¢å¤§å°
         Toolkit tk = getToolkit();
         Dimension dm = tk.getScreenSize();
 
-        //³õÊ¼¿íÎªÆÁÄ»µÄ 0.65±¶£¬ ¸ßÎªÆÁÄ»µÄ 0.65±¶
+        //åˆå§‹å®½ä¸ºå±å¹•çš„ 0.65å€ï¼Œ é«˜ä¸ºå±å¹•çš„ 0.65å€
         setSize((int) (dm.getWidth() * 0.65), (int) (dm.getHeight() * 0.65));
     }
 
     private void InitTextArea() {
         readinFont();
-        //µ±Ç°Ê¹ÓÃµÄ×ÖÌåÓë´óĞ¡
+        //å½“å‰ä½¿ç”¨çš„å­—ä½“ä¸å¤§å°
         ta.setFont(new Font(font, Font.PLAIN, fontSize));
 
         ta.setForeground(stringToColor(fontColor));
         ta.setBackground(Color.decode(bgColor));
 
-        //Ê¹ÎÄ±¾Çø¿É¹ö¶¯
+        //ä½¿æ–‡æœ¬åŒºå¯æ»šåŠ¨
         add(new JScrollPane(ta));
     }
 
@@ -247,7 +247,7 @@ public class J202203150619_4 extends JFrame {
             try {
                 fontConfig.createNewFile();
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("font.properties"), "gbk"));
-                writer.write("font=¿¬Ìå\nfontSize=15\nfontColor=black\nbgColor=#ffffff");
+                writer.write("font=æ¥·ä½“\nfontSize=15\nfontColor=black\nbgColor=#ffffff");
                 writer.flush();
                 writer.close();
             } catch (IOException e) {
@@ -296,14 +296,14 @@ public class J202203150619_4 extends JFrame {
     }
 
     //****************************************************************************************************************//
-    //ÊÂ¼şÏà¹Ø·½·¨
+    //äº‹ä»¶ç›¸å…³æ–¹æ³•
     //****************************************************************************************************************//
 
-    //ÎÄ¼şÏà¹Ø
+    //æ–‡ä»¶ç›¸å…³
     private void newFile() {
-        //¼ÙÈçÎÄ¼şĞŞ¸Ä
+        //å‡å¦‚æ–‡ä»¶ä¿®æ”¹
         if (!textContent.equals(ta.getText())) {
-            int choose = JOptionPane.showConfirmDialog(null, "ÊÇ·ñÒª±£´æĞŞ¸Ä£¿");
+            int choose = JOptionPane.showConfirmDialog(null, "æ˜¯å¦è¦ä¿å­˜ä¿®æ”¹ï¼Ÿ");
             switch (choose) {
                 case JOptionPane.YES_OPTION:
                     saveFile();
@@ -327,9 +327,9 @@ public class J202203150619_4 extends JFrame {
         }
     }
 
-    //Ñ¡Ôñ³É¹¦·µ»Øtrue ·´Ö®false
+    //é€‰æ‹©æˆåŠŸè¿”å›true åä¹‹false
     private boolean queryFileName() {
-        String newfile = JOptionPane.showInputDialog(null, "ÊäÈëÎÄ¼şÃû", ".txt");
+        String newfile = JOptionPane.showInputDialog(null, "è¾“å…¥æ–‡ä»¶å", ".txt");
         if (newfile == null || "".equals(newfile))
             return false;
         else
@@ -338,9 +338,9 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void openFile() {
-        //¼ÙÈçÎÄ¼şĞŞ¸Ä
+        //å‡å¦‚æ–‡ä»¶ä¿®æ”¹
         if (!textContent.equals(ta.getText())) {
-            int choose = JOptionPane.showConfirmDialog(null, "ÊÇ·ñÒª±£´æĞŞ¸Ä£¿");
+            int choose = JOptionPane.showConfirmDialog(null, "æ˜¯å¦è¦ä¿å­˜ä¿®æ”¹ï¼Ÿ");
             switch (choose) {
                 case JOptionPane.YES_OPTION:
                     saveFile();
@@ -351,17 +351,17 @@ public class J202203150619_4 extends JFrame {
                     return;
             }
         }
-        //Ñ¡ÔñÎÄ¼ş
+        //é€‰æ‹©æ–‡ä»¶
         JFileChooser fc = new JFileChooser(filePath);
         int ret = fc.showOpenDialog(this);
-        //ÅĞ¶ÏÑ¡Ôñ½á¹û
+        //åˆ¤æ–­é€‰æ‹©ç»“æœ
         switch (ret) {
             case JFileChooser.APPROVE_OPTION:
                 readinFile(fc);
-                setTitle(title + "£­" + fileName);
+                setTitle(title + "ï¼" + fileName);
                 break;
             case JFileChooser.ERROR_OPTION:
-                JOptionPane.showMessageDialog(this, "¶ÁÈ¡³ö´í£¡");
+                JOptionPane.showMessageDialog(this, "è¯»å–å‡ºé”™ï¼");
                 break;
             case JFileChooser.CANCEL_OPTION:
                 return;
@@ -375,14 +375,14 @@ public class J202203150619_4 extends JFrame {
         int len;
         textContent = "";
         try {
-            //¶ÁÈ¡ÎÄ¼şÄÚÈİ  ²¢Ö¸¶¨ÄÚÈİ±àÂëÎªgbk
+            //è¯»å–æ–‡ä»¶å†…å®¹  å¹¶æŒ‡å®šå†…å®¹ç¼–ç ä¸ºgbk
             filePath = fc.getSelectedFile().getParent() + "\\";
             fileName = fc.getSelectedFile().getName();
             InputStreamReader reader = new InputStreamReader(new FileInputStream(filePath + fileName), "gbk");
             BufferedReader in = new BufferedReader(reader, 100010);
             while ((len = in.read(buf)) != -1) {
                 text.append(buf, 0, len);
-                //·ÀÖ¹text»º´æÒÆ³ı ¶Á½ø4096¸ö×Ö·û¾ÍÊä³öÒ»´Î
+                //é˜²æ­¢textç¼“å­˜ç§»é™¤ è¯»è¿›4096ä¸ªå­—ç¬¦å°±è¾“å‡ºä¸€æ¬¡
                 textContent += text.toString();
                 text.setLength(0);
             }
@@ -427,11 +427,11 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void setBGColor() {
-        Color color = JColorChooser.showDialog(null, "Ñ¡Ôñ±³¾°ÑÕÉ«", Color.white);
+        Color color = JColorChooser.showDialog(null, "é€‰æ‹©èƒŒæ™¯é¢œè‰²", Color.white);
         if (color == null)
             return;
 
-        //getRGBµÄµÚÒ»¸ö×Ö½ÚÊÇÍ¸Ã÷¶È ²»ĞèÒª
+        //getRGBçš„ç¬¬ä¸€ä¸ªå­—èŠ‚æ˜¯é€æ˜åº¦ ä¸éœ€è¦
         int colorMask = 0x00ffffff;
         bgColor = "#" + Integer.toHexString(color.getRGB() & colorMask);
 
@@ -439,9 +439,9 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void checkQuit() {
-        //¼ÙÈçÎÄ¼şĞŞ¸Ä
+        //å‡å¦‚æ–‡ä»¶ä¿®æ”¹
         if (!textContent.equals(ta.getText())) {
-            int choose = JOptionPane.showConfirmDialog(null, "ÊÇ·ñÒª±£´æĞŞ¸Ä£¿");
+            int choose = JOptionPane.showConfirmDialog(null, "æ˜¯å¦è¦ä¿å­˜ä¿®æ”¹ï¼Ÿ");
             switch (choose) {
                 case JOptionPane.YES_OPTION:
                     saveFile();
@@ -454,7 +454,7 @@ public class J202203150619_4 extends JFrame {
                     return;
             }
         } else {
-            int ret = JOptionPane.showConfirmDialog(this, "È·¶¨ÒªÍË³öÏµÍ³Âğ£¿", "Java³ÌĞòÉè¼Æ×ÜºÍÊµÑé", JOptionPane.YES_NO_OPTION);
+            int ret = JOptionPane.showConfirmDialog(this, "ç¡®å®šè¦é€€å‡ºç³»ç»Ÿå—ï¼Ÿ", "Javaç¨‹åºè®¾è®¡æ€»å’Œå®éªŒ", JOptionPane.YES_NO_OPTION);
             switch (ret) {
                 case JOptionPane.YES_OPTION:
                     exit();
@@ -467,18 +467,18 @@ public class J202203150619_4 extends JFrame {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //JavaÉÏ»úÌâÄ¿
+    //Javaä¸Šæœºé¢˜ç›®
 
-    //»ØÎÄÊı
+    //å›æ–‡æ•°
     private void checkHuiWen() {
-        JFrame fr = new JFrame("ÅĞ¶Ï»ØÎÄÊı");
+        JFrame fr = new JFrame("åˆ¤æ–­å›æ–‡æ•°");
         fr.setLayout(new GridLayout(3, 1, 5, 20));
 
-        JLabel lbl = new JLabel("ÇëÊäÈë1-99999Ö®¼äµÄÕûÊı£º");
+        JLabel lbl = new JLabel("è¯·è¾“å…¥1-99999ä¹‹é—´çš„æ•´æ•°ï¼š");
         JTextField textField = new JTextField(5);
         textField.setHorizontalAlignment(JTextField.CENTER);
-        JButton checkBtn = new JButton("ÅĞ¶ÏÊÇ·ñÎª»ØÎÄÊı");
-        JButton cancelBtn = new JButton("È¡Ïû");
+        JButton checkBtn = new JButton("åˆ¤æ–­æ˜¯å¦ä¸ºå›æ–‡æ•°");
+        JButton cancelBtn = new JButton("å–æ¶ˆ");
         JPanel panBtn = new JPanel(new BorderLayout());
 
         panBtn.add(checkBtn, BorderLayout.WEST);
@@ -498,7 +498,7 @@ public class J202203150619_4 extends JFrame {
 
                 String content = textField.getText();
                 if (!isNumber(content) || content.length() > 5 || "".equals(content)) {
-                    JOptionPane.showMessageDialog(null, "ÊäÈë´íÎó£¡");
+                    JOptionPane.showMessageDialog(null, "è¾“å…¥é”™è¯¯ï¼");
                     return;
                 }
 
@@ -508,9 +508,9 @@ public class J202203150619_4 extends JFrame {
                         ok = false;
                 }
                 if (ok)
-                    JOptionPane.showMessageDialog(null, "ÕâÊÇÒ»¸ö»ØÎÄÊı");
+                    JOptionPane.showMessageDialog(null, "è¿™æ˜¯ä¸€ä¸ªå›æ–‡æ•°");
                 else
-                    JOptionPane.showMessageDialog(null, "Õâ²»ÊÇÒ»¸ö»ØÎÄÊı");
+                    JOptionPane.showMessageDialog(null, "è¿™ä¸æ˜¯ä¸€ä¸ªå›æ–‡æ•°");
             }
         };
         checkBtn.addActionListener(listener);
@@ -521,11 +521,11 @@ public class J202203150619_4 extends JFrame {
         fr.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
-    //Êı×ÖÓëÓ¢ÎÄ»¥Òë
+    //æ•°å­—ä¸è‹±æ–‡äº’è¯‘
     private void transNumToEng() {
-        JFrame fr = new JFrame("Êı×ÖÓëÓ¢ÎÄ»¥Òë");
+        JFrame fr = new JFrame("æ•°å­—ä¸è‹±æ–‡äº’è¯‘");
 
-        JLabel lbl = new JLabel("ÇëÊäÈë1-99Ö®¼äµÄÕûÊı£º");
+        JLabel lbl = new JLabel("è¯·è¾“å…¥1-99ä¹‹é—´çš„æ•´æ•°ï¼š");
         JTextField inField = new JTextField(5);
         JTextField outField = new JTextField(5);
         JSplitPane textPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, inField, outField);
@@ -535,8 +535,8 @@ public class J202203150619_4 extends JFrame {
         outField.setEditable(false);
         textPanel.setDividerSize(5);
 
-        JButton checkBtn = new JButton("È·¶¨");
-        JButton cancelBtn = new JButton("È¡Ïû");
+        JButton checkBtn = new JButton("ç¡®å®š");
+        JButton cancelBtn = new JButton("å–æ¶ˆ");
         JPanel panBtn = new JPanel(new BorderLayout());
 
         panBtn.add(checkBtn, BorderLayout.WEST);
@@ -565,8 +565,8 @@ public class J202203150619_4 extends JFrame {
                 String s = inField.getText();
                 if (isNumber(s)) {
                     int num = Integer.parseInt(s);
-                    if (num < 0 || num > 100) {//ÅĞ¶Ï·¶Î§
-                        JOptionPane.showMessageDialog(null, "ÊäÈë´íÎó£¡");
+                    if (num < 0 || num > 100) {//åˆ¤æ–­èŒƒå›´
+                        JOptionPane.showMessageDialog(null, "è¾“å…¥é”™è¯¯ï¼");
                         return;
                     }
 
@@ -599,7 +599,7 @@ public class J202203150619_4 extends JFrame {
                         }
                     } else if (len == 2) {
                         String fst = split[0], sec = split[1];
-                        //ÔÚisNumberÖĞÒÑ¾­ÅĞ¶ÏsecÎªzeroµÄÇé¿ö£¬Òò´Ë´Ë´¦²»ÔÙÅĞ¶Ï
+                        //åœ¨isNumberä¸­å·²ç»åˆ¤æ–­secä¸ºzeroçš„æƒ…å†µï¼Œå› æ­¤æ­¤å¤„ä¸å†åˆ¤æ–­
                         String ret = "";
                         for (int i = 0; i < z.length; i++) {
                             if (z[i].equals(fst)) {
@@ -616,7 +616,7 @@ public class J202203150619_4 extends JFrame {
                         outField.setText(ret);
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "ÊäÈë´íÎó£¡");
+                    JOptionPane.showMessageDialog(null, "è¾“å…¥é”™è¯¯ï¼");
                 }
             }
         };
@@ -629,16 +629,16 @@ public class J202203150619_4 extends JFrame {
         textPanel.setDividerLocation(0.5);
     }
 
-    //Í³¼ÆÓ¢ÎÄÊı¾İ
+    //ç»Ÿè®¡è‹±æ–‡æ•°æ®
     private void computeWords() {
-        //ÏÈ»ñµÃÍ³¼ÆÊı¾İ
+        //å…ˆè·å¾—ç»Ÿè®¡æ•°æ®
         int[] cnt = new int[26];
         int containsOr = 0;
         int lengthIs3 = 0;
 
         String content = ta.getText();
         if ("".equals(content) || content == null) {
-            JOptionPane.showMessageDialog(null, "ÎŞÎÄ±¾Êı¾İ¿ÉÒÔÍ³¼Æ£¡");
+            JOptionPane.showMessageDialog(null, "æ— æ–‡æœ¬æ•°æ®å¯ä»¥ç»Ÿè®¡ï¼");
             return;
         }
 
@@ -655,21 +655,21 @@ public class J202203150619_4 extends JFrame {
                 lengthIs3++;
         }
 
-        JFrame fr = new JFrame("Í³¼ÆÓ¢ÎÄÊı¾İ");
+        JFrame fr = new JFrame("ç»Ÿè®¡è‹±æ–‡æ•°æ®");
 
         JSplitPane mainPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
 
 
         JPanel upperPanel = new JPanel(new GridLayout(2, 1, 0, 0));
 
-        JLabel lblOr = new JLabel("º¬\"or\"×Ö·û´®µÄµ¥´ÊÊé");
+        JLabel lblOr = new JLabel("å«\"or\"å­—ç¬¦ä¸²çš„å•è¯ä¹¦");
         JLabel lblOrNum = new JLabel(String.valueOf(containsOr));
         JPanel panOr = new JPanel();
 
         panOr.add(lblOr);
         panOr.add(lblOrNum);
 
-        JLabel lblLen3 = new JLabel("³¤¶ÈÎª3µÄµ¥´ÊÊı");
+        JLabel lblLen3 = new JLabel("é•¿åº¦ä¸º3çš„å•è¯æ•°");
         JLabel lblLen3Num = new JLabel(String.valueOf(lengthIs3));
         JPanel pan3 = new JPanel();
 
@@ -687,7 +687,7 @@ public class J202203150619_4 extends JFrame {
 
         int max = 0;
         for (int x : cnt) max = Math.max(max, x);
-        //ÖÁÉÙ»­ËÄĞĞ
+        //è‡³å°‘ç”»å››è¡Œ
         int idx = Math.max(4, max);
 
         while (idx > 0) {
@@ -724,16 +724,16 @@ public class J202203150619_4 extends JFrame {
         mainPanel.setDividerLocation(0.1);
     }
 
-    //ÊÖ»úºÅÂëºÏ·¨ĞÔÅĞ¶Ï
+    //æ‰‹æœºå·ç åˆæ³•æ€§åˆ¤æ–­
     private void phoneCheck() {
-        JFrame fr = new JFrame("ÊÖ»úºÅÂëºÏ·¨ĞÔÅĞ¶Ï");
+        JFrame fr = new JFrame("æ‰‹æœºå·ç åˆæ³•æ€§åˆ¤æ–­");
         fr.setLayout(new GridLayout(3, 1, 5, 20));
 
-        JLabel lbl = new JLabel("ÇëÊäÈëºÏ·¨µÄÊÖ»úºÅ£º");
+        JLabel lbl = new JLabel("è¯·è¾“å…¥åˆæ³•çš„æ‰‹æœºå·ï¼š");
         JTextField textField = new JTextField(5);
         textField.setHorizontalAlignment(JTextField.CENTER);
-        JButton checkBtn = new JButton("ÅĞ¶ÏºÏ·¨ĞÔ");
-        JButton cancelBtn = new JButton("È¡Ïû");
+        JButton checkBtn = new JButton("åˆ¤æ–­åˆæ³•æ€§");
+        JButton cancelBtn = new JButton("å–æ¶ˆ");
         JPanel panBtn = new JPanel(new BorderLayout());
 
         panBtn.add(checkBtn, BorderLayout.WEST);
@@ -757,15 +757,15 @@ public class J202203150619_4 extends JFrame {
                     split = s.substring(1).split("-");
                 else
                     split = s.split("-");
-                //ÅĞ¶Ï³¤¶È
+                //åˆ¤æ–­é•¿åº¦
                 int len = 0;
                 for (String sp : split)
                     len += sp.length();
                 if (len != 13) {
-                    JOptionPane.showMessageDialog(null, "³¤¶È²»ºÏ·¨£¬·µ»Ø1");
+                    JOptionPane.showMessageDialog(null, "é•¿åº¦ä¸åˆæ³•ï¼Œè¿”å›1");
                     return;
                 }
-                //ÅĞ¶Ï°üº¬·ÇÊı×Ö
+                //åˆ¤æ–­åŒ…å«éæ•°å­—
                 boolean ok = true;
                 for (String sp : split)
                     for (char c : sp.toCharArray())
@@ -774,18 +774,18 @@ public class J202203150619_4 extends JFrame {
                             break;
                         }
                 if (!ok) {
-                    JOptionPane.showMessageDialog(null, "°üº¬·ÇÊı×Ö£¬·µ»Ø2");
+                    JOptionPane.showMessageDialog(null, "åŒ…å«éæ•°å­—ï¼Œè¿”å›2");
                     return;
                 }
-                //²»ÊÇ86´òÍ·
+                //ä¸æ˜¯86æ‰“å¤´
                 if (!("86".equals(s.substring(0, 2)) || "+86".equals(s.substring(0, 3)))) {
-                    JOptionPane.showMessageDialog(null, "²»ÊÇ86´òÍ·£¬·µ»Ø3");
+                    JOptionPane.showMessageDialog(null, "ä¸æ˜¯86æ‰“å¤´ï¼Œè¿”å›3");
                     return;
                 }
-                //¸ñÊ½ÓĞÎÊÌâ
-                //8613957177889ÕâÖÖÖ»ÓĞ³¤¶ÈÏŞÖÆ ÉÏÃæÒÑÅĞ¶Ï
-                //+8613957177889Í¬Àí
-                //86-13957177889 »ò +86-13957177889
+                //æ ¼å¼æœ‰é—®é¢˜
+                //8613957177889è¿™ç§åªæœ‰é•¿åº¦é™åˆ¶ ä¸Šé¢å·²åˆ¤æ–­
+                //+8613957177889åŒç†
+                //86-13957177889 æˆ– +86-13957177889
                 ok = true;
                 if (!(s.length() == 13 || s.length() == 14 || s.length() == 15 || s.length() == 17))
                     ok = false;
@@ -796,11 +796,11 @@ public class J202203150619_4 extends JFrame {
                     if (!(split[0].length() == 2 && split[1].length() == 3 && split[2].length() == 4 && split[3].length() == 4))
                         ok = false;
                 if (!ok) {
-                    JOptionPane.showMessageDialog(null, "¸ñÊ½´íÎó£¬ ·µ»Ø4");
+                    JOptionPane.showMessageDialog(null, "æ ¼å¼é”™è¯¯ï¼Œ è¿”å›4");
                     return;
                 }
-                //ºÏ·¨
-                JOptionPane.showMessageDialog(null, "ºÅÂëºÏ·¨£¬·µ»Ø0");
+                //åˆæ³•
+                JOptionPane.showMessageDialog(null, "å·ç åˆæ³•ï¼Œè¿”å›0");
             }
         };
         checkBtn.addActionListener(listener);
@@ -812,7 +812,7 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void textSum() {
-        JFrame fr = new JFrame("ÎÄ±¾ÎÄ¼şÇóºÍ");
+        JFrame fr = new JFrame("æ–‡æœ¬æ–‡ä»¶æ±‚å’Œ");
 
         JLabel lbl = new JLabel();
 
@@ -821,7 +821,7 @@ public class J202203150619_4 extends JFrame {
         bar.setBackground(Color.white);
         bar.setForeground(Color.blue);
 
-        JButton btn = new JButton("¿ªÊ¼");
+        JButton btn = new JButton("å¼€å§‹");
         JPanel pan = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         pan.add(btn);
 
@@ -834,13 +834,13 @@ public class J202203150619_4 extends JFrame {
         ActionListener listener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if ("¿ªÊ¼".equals(btn.getText())) {
+                if ("å¼€å§‹".equals(btn.getText())) {
                     stepper.setContent(ta.getText());
                     stepper.start();
-                    btn.setText("È¡Ïû");
+                    btn.setText("å–æ¶ˆ");
                     return;
                 }
-                if ("È¡Ïû".equals(btn.getText())) {
+                if ("å–æ¶ˆ".equals(btn.getText())) {
                     stepper.stop(true);
                     fr.dispose();
                 }
@@ -856,13 +856,13 @@ public class J202203150619_4 extends JFrame {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //Í¨Ñ¶Â¼
-    //Í¨Ñ¶Â¼Î¬»¤
+    //é€šè®¯å½•
+    //é€šè®¯å½•ç»´æŠ¤
     private void displayData() throws Exception {
-        JFrame fr = new JFrame("Í¨Ñ¶Â¼");
+        JFrame fr = new JFrame("é€šè®¯å½•");
 
-        Object[] colName = {"ĞòºÅ", "ĞÕÃû", "ĞÔ±ğ", "ÒÆ¶¯µç»°ºÅÂë", "Email", "QQºÅ"};
-        //¶ÁÈ¡Êı¾İ
+        Object[] colName = {"åºå·", "å§“å", "æ€§åˆ«", "ç§»åŠ¨ç”µè¯å·ç ", "Email", "QQå·"};
+        //è¯»å–æ•°æ®
         Object[][] rowData;
         File file = new File(dataFilePath + dataFileName);
         if (file.exists()) {
@@ -877,7 +877,7 @@ public class J202203150619_4 extends JFrame {
             Contact c = all.get(i);
             rowData[i][0] = c.getnId();
             rowData[i][1] = c.getsName();
-            rowData[i][2] = c.getByteSex() == 1 ? "ÄĞ" : "Å®";
+            rowData[i][2] = c.getByteSex() == 1 ? "ç”·" : "å¥³";
             rowData[i][3] = c.getsCellPhone();
             rowData[i][4] = c.getsEmail();
             rowData[i][5] = c.getsInstantMessager();
@@ -887,11 +887,11 @@ public class J202203150619_4 extends JFrame {
         table.setRowSelectionAllowed(true);
         JScrollPane tablePan = new JScrollPane(table);
 
-        JButton addBtn = new JButton("Ìí¼Ó");
-        JButton delBtn = new JButton("É¾³ı");
-        JButton chaBtn = new JButton("ĞŞ¸Ä");
-        JButton queBtn = new JButton("²éÑ¯");
-        JButton extBtn = new JButton("¹Ø±Õ");
+        JButton addBtn = new JButton("æ·»åŠ ");
+        JButton delBtn = new JButton("åˆ é™¤");
+        JButton chaBtn = new JButton("ä¿®æ”¹");
+        JButton queBtn = new JButton("æŸ¥è¯¢");
+        JButton extBtn = new JButton("å…³é—­");
         JPanel btnPan = new JPanel();
 
         btnPan.add(addBtn);
@@ -956,24 +956,24 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void addContact(JTable table) {
-        JFrame fr = new JFrame("Ìí¼ÓÁªÏµÈË");
+        JFrame fr = new JFrame("æ·»åŠ è”ç³»äºº");
 
-        JLabel lbl1 = new JLabel("ĞÕÃû");
+        JLabel lbl1 = new JLabel("å§“å");
         JTextField nameField = new JTextField(10);
         JPanel pan1 = new JPanel();
         pan1.add(lbl1);
         pan1.add(nameField);
 
-        JLabel lbl2 = new JLabel("ĞÔ±ğ");
+        JLabel lbl2 = new JLabel("æ€§åˆ«");
         JComboBox<String> sexCom = new JComboBox<>();
-        sexCom.addItem("ÄĞ");
-        sexCom.addItem("Å®");
-        sexCom.setSelectedItem("ÄĞ");
+        sexCom.addItem("ç”·");
+        sexCom.addItem("å¥³");
+        sexCom.setSelectedItem("ç”·");
         JPanel pan2 = new JPanel();
         pan2.add(lbl2);
         pan2.add(sexCom);
 
-        JLabel lbl3 = new JLabel("ÒÆ¶¯µç»°ºÅÂë");
+        JLabel lbl3 = new JLabel("ç§»åŠ¨ç”µè¯å·ç ");
         JTextField phoneFiled = new JTextField(10);
         JPanel pan3 = new JPanel();
         pan3.add(lbl3);
@@ -991,8 +991,8 @@ public class J202203150619_4 extends JFrame {
         pan5.add(lbl5);
         pan5.add(qqField);
 
-        JButton yes = new JButton("È·¶¨");
-        JButton no = new JButton("È¡Ïû");
+        JButton yes = new JButton("ç¡®å®š");
+        JButton no = new JButton("å–æ¶ˆ");
         JPanel pan6 = new JPanel();
         pan6.add(yes);
         pan6.add(no);
@@ -1006,10 +1006,10 @@ public class J202203150619_4 extends JFrame {
                 String email = emailField.getText();
                 String qq = qqField.getText();
                 if (name.isEmpty() || phone.isEmpty() || email.isEmpty()|| qq.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "ĞÅÏ¢²»ÍêÕû£¡");
+                    JOptionPane.showMessageDialog(null, "ä¿¡æ¯ä¸å®Œæ•´ï¼");
                     return;
                 }
-                byte bytesex = (byte) ("ÄĞ".equals(sex) ? 1 : 0);
+                byte bytesex = (byte) ("ç”·".equals(sex) ? 1 : 0);
                 mana.addContact(new Contact(name, bytesex, phone, email, qq));
                 fr.dispose();
                 flushTable(table);
@@ -1038,24 +1038,24 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void changeContact(int oldid, JTable table) {
-        JFrame fr = new JFrame("ĞŞ¸ÄÁªÏµÈË");
+        JFrame fr = new JFrame("ä¿®æ”¹è”ç³»äºº");
 
-        JLabel lbl1 = new JLabel("ĞÕÃû");
+        JLabel lbl1 = new JLabel("å§“å");
         JTextField nameField = new JTextField(10);
         JPanel pan1 = new JPanel();
         pan1.add(lbl1);
         pan1.add(nameField);
 
-        JLabel lbl2 = new JLabel("ĞÔ±ğ");
+        JLabel lbl2 = new JLabel("æ€§åˆ«");
         JComboBox<String> sexCom = new JComboBox<>();
-        sexCom.addItem("ÄĞ");
-        sexCom.addItem("Å®");
-        sexCom.setSelectedItem("ÄĞ");
+        sexCom.addItem("ç”·");
+        sexCom.addItem("å¥³");
+        sexCom.setSelectedItem("ç”·");
         JPanel pan2 = new JPanel();
         pan2.add(lbl2);
         pan2.add(sexCom);
 
-        JLabel lbl3 = new JLabel("ÒÆ¶¯µç»°ºÅÂë");
+        JLabel lbl3 = new JLabel("ç§»åŠ¨ç”µè¯å·ç ");
         JTextField phoneFiled = new JTextField(10);
         JPanel pan3 = new JPanel();
         pan3.add(lbl3);
@@ -1073,8 +1073,8 @@ public class J202203150619_4 extends JFrame {
         pan5.add(lbl5);
         pan5.add(qqField);
 
-        JButton yes = new JButton("ĞŞ¸Ä");
-        JButton no = new JButton("È¡Ïû");
+        JButton yes = new JButton("ä¿®æ”¹");
+        JButton no = new JButton("å–æ¶ˆ");
         JPanel pan6 = new JPanel();
         pan6.add(yes);
         pan6.add(no);
@@ -1088,10 +1088,10 @@ public class J202203150619_4 extends JFrame {
                 String email = emailField.getText();
                 String qq = qqField.getText();
                 if (name.isEmpty() || phone.isEmpty() || email.isEmpty()|| qq.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "ĞÅÏ¢²»ÍêÕû£¡");
+                    JOptionPane.showMessageDialog(null, "ä¿¡æ¯ä¸å®Œæ•´ï¼");
                     return;
                 }
-                byte bytesex = (byte) ("ÄĞ".equals(sex) ? 1 : 0);
+                byte bytesex = (byte) ("ç”·".equals(sex) ? 1 : 0);
                 mana.updateContact(oldid, new Contact(name, bytesex, phone, email, qq));
                 fr.dispose();
                 flushTable(table);
@@ -1120,18 +1120,18 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void queryContact(JTable table) {
-        JFrame fr = new JFrame("²éÑ¯ÁªÏµÈË");
+        JFrame fr = new JFrame("æŸ¥è¯¢è”ç³»äºº");
 
-        JLabel lbl = new JLabel("ÊäÈë¹Ø¼ü×Ö£º");
+        JLabel lbl = new JLabel("è¾“å…¥å…³é”®å­—ï¼š");
         JTextField txtField = new JTextField(10);
-        JButton queBtn = new JButton("²éÑ¯");
+        JButton queBtn = new JButton("æŸ¥è¯¢");
 
 
         queBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame fr = new JFrame("²éÑ¯½á¹û");
-                Object[] colName = {"ĞòºÅ", "ĞÕÃû", "ĞÔ±ğ", "ÒÆ¶¯µç»°ºÅÂë", "Email", "QQºÅ"};
+                JFrame fr = new JFrame("æŸ¥è¯¢ç»“æœ");
+                Object[] colName = {"åºå·", "å§“å", "æ€§åˆ«", "ç§»åŠ¨ç”µè¯å·ç ", "Email", "QQå·"};
 
                 List<Contact> all = mana.searchContacts(txtField.getText());
                 Object[][] rowData = new Object[all.size()][6];
@@ -1165,7 +1165,7 @@ public class J202203150619_4 extends JFrame {
     }
 
     private void flushTable(JTable table) {
-        Object[] colName = {"ĞòºÅ", "ĞÕÃû", "ĞÔ±ğ", "ÒÆ¶¯µç»°ºÅÂë", "Email", "QQºÅ"};
+        Object[] colName = {"åºå·", "å§“å", "æ€§åˆ«", "ç§»åŠ¨ç”µè¯å·ç ", "Email", "QQå·"};
 
         List<Contact> all = mana.getAllContacts();
         Object[][] rowData = new Object[all.size()][6];
@@ -1173,7 +1173,7 @@ public class J202203150619_4 extends JFrame {
             Contact c = all.get(i);
             rowData[i][0] = c.getnId();
             rowData[i][1] = c.getsName();
-            rowData[i][2] = c.getByteSex() == 1 ? "ÄĞ" : "Å®";
+            rowData[i][2] = c.getByteSex() == 1 ? "ç”·" : "å¥³";
             rowData[i][3] = c.getsCellPhone();
             rowData[i][4] = c.getsEmail();
             rowData[i][5] = c.getsInstantMessager();
@@ -1189,7 +1189,7 @@ public class J202203150619_4 extends JFrame {
         out.close();
     }
 
-    //Í¨Ñ¶Â¼´¢´æÎÄ¼şÉèÖÃ
+    //é€šè®¯å½•å‚¨å­˜æ–‡ä»¶è®¾ç½®
     private void setDataPath() {
         JFileChooser jf = new JFileChooser(filePath);
         jf.setSelectedFile(new File(dataFilePath, dataFileName));
@@ -1199,14 +1199,14 @@ public class J202203150619_4 extends JFrame {
     }
 
     //****************************************************************************************************************//
-    //Í¨ÓÃ·½·¨
+    //é€šç”¨æ–¹æ³•
     //****************************************************************************************************************//
     private void exit() {
-        //±£´æ×ÖÌå ×ÖÌå´óĞ¡ ×ÖÌåÑÕÉ« ±³¾°ÑÕÉ«
+        //ä¿å­˜å­—ä½“ å­—ä½“å¤§å° å­—ä½“é¢œè‰² èƒŒæ™¯é¢œè‰²
         saveFont();
-        //±£´æÊı¾İÎÄ¼şÂ·¾¶
+        //ä¿å­˜æ•°æ®æ–‡ä»¶è·¯å¾„
         saveDataPath();
-        //±£´æ½áÊøºóÍË³ö
+        //ä¿å­˜ç»“æŸåé€€å‡º
         myFontDly.dispose();
         dispose();
     }
@@ -1260,12 +1260,12 @@ public class J202203150619_4 extends JFrame {
     }
 
     //****************************************************************************************************************//
-    //Ö÷³ÌÈë¿Ú
+    //ä¸»ç¨‹å…¥å£
     //****************************************************************************************************************//
     public static void main(String[] args) {
         J202203150619_4 fr = new J202203150619_4(title);
 
-        //½«ÓÒÉÏ½ÇµÄ²î»»Îª×Ô¼ºµÄÍË³öº¯Êı
+        //å°†å³ä¸Šè§’çš„å·®æ¢ä¸ºè‡ªå·±çš„é€€å‡ºå‡½æ•°
         fr.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         fr.addWindowListener(new WindowAdapter() {
             @Override
@@ -1278,18 +1278,18 @@ public class J202203150619_4 extends JFrame {
     }
 
     //****************************************************************************************************************//
-    //¸¨Öú·½·¨
+    //è¾…åŠ©æ–¹æ³•
     //****************************************************************************************************************//
     public static void centerWindow(Window f) {
-        //»ñµÃ×ÀÃæ´óĞ¡
+        //è·å¾—æ¡Œé¢å¤§å°
         Toolkit tk = f.getToolkit();
         Dimension dm = tk.getScreenSize();
-        //ÈÃ´°¿Ú¾ÓÖĞÏÔÊ¾
+        //è®©çª—å£å±…ä¸­æ˜¾ç¤º
         f.setLocation((int) (dm.getWidth() - f.getWidth()) / 2, (int) (dm.getHeight() - f.getHeight()) / 2);
     }
 
     public static void setPopWindowSize(Window f) {
-        //»ñµÃ×ÀÃæ´óĞ¡
+        //è·å¾—æ¡Œé¢å¤§å°
         Toolkit tk = f.getToolkit();
         Dimension dm = tk.getScreenSize();
 
@@ -1351,7 +1351,7 @@ public class J202203150619_4 extends JFrame {
             return inArray(s, x) || inArray(s, y);
         } else if (len == 2) {
             String fst = split[0], sec = split[1];
-            if ("zero".equals(sec)) { // ·ÀÖ¹ thirty zero ÕâÑùµÄ°¸ÀıÍ¨¹ı
+            if ("zero".equals(sec)) { // é˜²æ­¢ thirty zero è¿™æ ·çš„æ¡ˆä¾‹é€šè¿‡
                 return false;
             }
             return inArray(fst, z) && inArray(sec, x);
@@ -1369,10 +1369,10 @@ public class J202203150619_4 extends JFrame {
     }
 
     //****************************************************************************************************************//
-    //×Ô¶¨ÒåÄÚ²¿Àà
+    //è‡ªå®šä¹‰å†…éƒ¨ç±»
     //****************************************************************************************************************//
 
-    //ÓĞÖú¼Ç·û¹¹Ôìº¯ÊıµÄ°´Å¥
+    //æœ‰åŠ©è®°ç¬¦æ„é€ å‡½æ•°çš„æŒ‰é’®
     static class MyMenu extends JMenu {
         private MyMenu(String label) {
             super(label);
@@ -1384,35 +1384,35 @@ public class J202203150619_4 extends JFrame {
         }
     }
 
-    //Ñ¡×ÖÌåµÄ½çÃæ¿ò
+    //é€‰å­—ä½“çš„ç•Œé¢æ¡†
     class MyFontDly extends JFrame {
-        //Á½¸ö°´Å¥
-        JButton btnOk = new JButton("È·¶¨");
-        JButton btnCancel = new JButton("È¡Ïû");
+        //ä¸¤ä¸ªæŒ‰é’®
+        JButton btnOk = new JButton("ç¡®å®š");
+        JButton btnCancel = new JButton("å–æ¶ˆ");
         JPanel panButtons = new JPanel();
 
-        //×ÖÌåÃû³Æ
+        //å­—ä½“åç§°
         String _font;
-        JLabel lblFont = new JLabel("×ÖÌåÃû³Æ£º", JLabel.LEFT);
+        JLabel lblFont = new JLabel("å­—ä½“åç§°ï¼š", JLabel.LEFT);
         JComboBox<String> cbFontFamily = new JComboBox<>();
         JPanel panFont = new JPanel();
 
-        //×ÖÌå´óĞ¡
+        //å­—ä½“å¤§å°
         int _fontSize;
-        JLabel lblFontSize = new JLabel("×ÖÌå´óĞ¡£º", JLabel.LEFT);
+        JLabel lblFontSize = new JLabel("å­—ä½“å¤§å°ï¼š", JLabel.LEFT);
         JComboBox<String> cbFontSize = new JComboBox<>();
         JPanel panFontSize = new JPanel();
 
-        //×ÖÌåÑÕÉ«
+        //å­—ä½“é¢œè‰²
         String _fontColor;
-        JLabel lblFontColor = new JLabel("×ÖÌåÑÕÉ«£º", JLabel.LEFT);
+        JLabel lblFontColor = new JLabel("å­—ä½“é¢œè‰²ï¼š", JLabel.LEFT);
         JComboBox<String> cbFontColor = new JComboBox<>();
         JPanel panFontColor = new JPanel();
         final String[] fontColors = {"white", "black", "gray", "red", "pink", "orange", "yellow", "cyan", "blue"};
 
-        //×ÖÌåÔ¤ÀÀ
-        JLabel lblFontPreview = new JLabel("×ÖÌåÔ¤ÀÀ£º", JLabel.LEFT);
-        JLabel lblTextPreview = new JLabel("java ÄãºÃÎÒºÃ´ó¼ÒºÃ", JLabel.CENTER);
+        //å­—ä½“é¢„è§ˆ
+        JLabel lblFontPreview = new JLabel("å­—ä½“é¢„è§ˆï¼š", JLabel.LEFT);
+        JLabel lblTextPreview = new JLabel("java ä½ å¥½æˆ‘å¥½å¤§å®¶å¥½", JLabel.CENTER);
         JPanel panFontPreView = new JPanel();
 
         public void showFontDly() {
@@ -1429,10 +1429,10 @@ public class J202203150619_4 extends JFrame {
             GridLayout gl = new GridLayout(5, 1, 5, 5);
             setLayout(gl);
 
-            //³õÊ¼»¯×ÖÌå¿ò
+            //åˆå§‹åŒ–å­—ä½“æ¡†
             InitFonts();
 
-            //×ÖÌåÃû³Æ
+            //å­—ä½“åç§°
             _font = font;
             panFont.setLayout(new BorderLayout());
             panFont.add(lblFont, BorderLayout.WEST);
@@ -1446,7 +1446,7 @@ public class J202203150619_4 extends JFrame {
             });
             add(panFont);
 
-            //×ÖÌå´óĞ¡
+            //å­—ä½“å¤§å°
             _fontSize = fontSize;
             panFontSize.setLayout(new BorderLayout());
             panFontSize.add(lblFontSize, BorderLayout.WEST);
@@ -1460,7 +1460,7 @@ public class J202203150619_4 extends JFrame {
             });
             add(panFontSize);
 
-            //×ÖÌåÑÕÉ«
+            //å­—ä½“é¢œè‰²
             _fontColor = fontColor;
             panFontColor.setLayout(new BorderLayout());
             panFontColor.add(lblFontColor, BorderLayout.WEST);
@@ -1474,7 +1474,7 @@ public class J202203150619_4 extends JFrame {
             });
             add(panFontColor);
 
-            //×ÖÌåÔ¤ÀÀ
+            //å­—ä½“é¢„è§ˆ
             panFontPreView.setLayout(new BorderLayout());
             panFontPreView.add(lblFontPreview, BorderLayout.WEST);
             panFontPreView.add(lblTextPreview, BorderLayout.CENTER);
@@ -1482,18 +1482,18 @@ public class J202203150619_4 extends JFrame {
             lblTextPreview.setOpaque(true);
             add(panFontPreView);
 
-            //°´Å¥ÉèÖÃ
+            //æŒ‰é’®è®¾ç½®
             panButtons.setLayout(new FlowLayout(FlowLayout.RIGHT));
             panButtons.add(btnOk);
             panButtons.add(btnCancel);
             add(panButtons);
 
-            //³õÊ¼»¯ÏÂÀ­¿ò
+            //åˆå§‹åŒ–ä¸‹æ‹‰æ¡†
             cbFontFamily.setSelectedItem(_font);
             cbFontSize.setSelectedItem(Integer.toString(_fontSize));
             cbFontColor.setSelectedItem(_fontColor);
 
-            //×¢²áÊÂ¼ş
+            //æ³¨å†Œäº‹ä»¶
             btnOk.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -1506,7 +1506,7 @@ public class J202203150619_4 extends JFrame {
                     btnActionPerformed(e);
                 }
             });
-            //³õÊ¼»¯×ÖÌåÔ¤ÀÀ
+            //åˆå§‹åŒ–å­—ä½“é¢„è§ˆ
             lblTextPreview.setFont(new Font(_font, Font.PLAIN, _fontSize));
             lblTextPreview.setForeground(stringToColor(_fontColor));
         }
@@ -1525,7 +1525,7 @@ public class J202203150619_4 extends JFrame {
                 _fontColor = fontColor;
             }
 
-            //Òş²Ø´°¿Ú
+            //éšè—çª—å£
             hideFontDly();
         }
 
@@ -1561,21 +1561,21 @@ public class J202203150619_4 extends JFrame {
         }
     }
 
-    //´øÏß³ÌµÄ½ø¶ÈÌõ
+    //å¸¦çº¿ç¨‹çš„è¿›åº¦æ¡
     class BarThread extends Thread {
         String content;
         JLabel lbl;
         JProgressBar progressBar;
         boolean m_bStopped;
 
-        //¹¹Ôì·½·¨
+        //æ„é€ æ–¹æ³•
         public BarThread(JProgressBar bar, JLabel lbl) {
             progressBar = bar;
             this.lbl = lbl;
             m_bStopped = false;
         }
 
-        //Ïß³ÌÌå
+        //çº¿ç¨‹ä½“
         public void run() {
             String[] split = content.split("\\r\\n|\\n|\\r");
             long size = split.length;
@@ -1594,7 +1594,7 @@ public class J202203150619_4 extends JFrame {
                 long passTime = System.currentTimeMillis() - startTime;
                 long needTime = passTime * size / (i + 1) - passTime;
 
-                lbl.setText(String.format("µ±Ç°ºÍÎª%f,ÕıÔÚ¼ÆËã±äÁ¿%s(%d/%d),´óÔ¼»¹Ê£ÏÂ%dÃë", sum, s.substring(0, idx), i + 1, size, needTime / 1000));
+                lbl.setText(String.format("å½“å‰å’Œä¸º%f,æ­£åœ¨è®¡ç®—å˜é‡%s(%d/%d),å¤§çº¦è¿˜å‰©ä¸‹%dç§’", sum, s.substring(0, idx), i + 1, size, needTime / 1000));
                 progressBar.setValue((int) Math.ceil(nowPercent * 100));
             }
         }
@@ -1603,14 +1603,14 @@ public class J202203150619_4 extends JFrame {
             this.content = content;
         }
 
-        //ÉèÖÃÍ£Ö¹
+        //è®¾ç½®åœæ­¢
         public void stop(boolean bStopped) {
             m_bStopped = bStopped;
         }
     }
 }
 
-//ÁªÏµÈË¹ÜÀíÀà ·½±ã¹ÜÀí
+//è”ç³»äººç®¡ç†ç±» æ–¹ä¾¿ç®¡ç†
 class ContactManager implements Serializable{
     static final long serialVersionUID = 1L;
 
@@ -1657,8 +1657,8 @@ class ContactManager implements Serializable{
     public List<Contact> searchContacts(String keyword) {
         List<Contact> results = new ArrayList<>();
         for (Contact contact : contacts) {
-            // ¸ù¾İĞèÒª½øĞĞÄ£ºı²éÑ¯
-            // ÅĞ¶ÏĞÕÃû¡¢¹¤×÷µ¥Î»¡¢±¸×¢×Ö¶ÎÊÇ·ñ°üº¬ keyword
+            // æ ¹æ®éœ€è¦è¿›è¡Œæ¨¡ç³ŠæŸ¥è¯¢
+            // åˆ¤æ–­å§“åã€å·¥ä½œå•ä½ã€å¤‡æ³¨å­—æ®µæ˜¯å¦åŒ…å« keyword
             if (contact.getsName().contains(keyword) ||
                     contact.getsCellPhone().contains(keyword) ||
                     contact.getsEmail().contains(keyword) ||
@@ -1674,12 +1674,12 @@ class ContactManager implements Serializable{
     }
 }
 
-//ÁªÏµÈËÀà
+//è”ç³»äººç±»
 class Contact implements Serializable {
     static final long serialVersionUID = 1L;
     int nId;
-    String sName; //·Ç¿Õ
-    byte byteSex; //1±íÊ¾ÄĞ£¬0±íÊ¾Å®£¬·Ç¿Õ
+    String sName; //éç©º
+    byte byteSex; //1è¡¨ç¤ºç”·ï¼Œ0è¡¨ç¤ºå¥³ï¼Œéç©º
     String sAddress;
     String sCompany;
     String sPostalCode;
